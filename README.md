@@ -37,7 +37,7 @@ command: 'python3 predict_movie_genres.py'
 
 ### analyze_movies.py
 
-analyze_movies.py shows the details of the statistical tests and Chi-square test to determine if there is genres has an influence on movie genres
+analyze_movies.py shows the details of the statistical tests and Chi-square test to determine if there is genres has an influence on movie ratings
 
 command: 'python3 analyze_movies.py' 
 
