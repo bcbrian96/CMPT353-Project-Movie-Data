@@ -70,6 +70,7 @@ sorted_unique_genres = genres['genre'].tolist()
 
 movie_genres['genres'] = movie_genres['genres'].apply(lambda x: [i[1] for i in x])
 movie_genres['genres'] = movie_genres['genres'].apply(", ".join)
+
 # increase the weight for the genres by 3 times compared to the movie overview
 movie_genres['overview_genres'] = movie_genres['overview'] + movie_genres['genres'] + movie_genres['genres'] + movie_genres['genres']
 
@@ -91,12 +92,6 @@ overview_bow = tfidfvectorizer.fit_transform(movie_genres['overview'])
 **************** ANALYZING ****************
 
 """
-
-
-plt.rcParams["figure.figsize"] = (18, 9)
-# plt.hist(prepared_data['group'], bins=len(grouped_data))  # frequency of each group of genres
-# plt.plot(prepared_data['group'], prepared_data['genres_avg'], 'bo', markersize=2)  # plot genre groups and their avg ratings
-# plt.show()
 
 
 ''' Build a ML model to predict movie rating based on overview and genres '''

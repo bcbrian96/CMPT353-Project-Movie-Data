@@ -165,37 +165,4 @@ print(classification_report(y_valid, y_pred, target_names=unique_genres, zero_di
 print(precision_score(y_valid, y_pred, average="macro", zero_division=0))
 print("")
 
-print("OVR - MLP Classifier:")
-model_ovr_mlp = make_pipeline(
-    CountVectorizer(),
-    TfidfTransformer(),
-    OneVsRestClassifier(MLPClassifier(hidden_layer_sizes=(5, 4), activation='logistic', solver='lbfgs', max_iter=36000))
-)
-model_ovr_mlp.fit(X_train, y_train)
-y_pred = model_ovr_mlp.predict(X_valid)
-print(model_ovr_mlp.score(X_train, y_train))
-print(model_ovr_mlp.score(X_valid, y_valid))
-print(classification_report(y_valid, y_pred, target_names=unique_genres, zero_division=0))
-print(precision_score(y_valid, y_pred, average="macro", zero_division=0))
-print("")
-
-print("OVR - Voting Classifier:")
-model_ovr_voting = make_pipeline(
-    CountVectorizer(),
-    TfidfTransformer(),
-    OneVsRestClassifier(VotingClassifier([
-        ('neighbors', KNeighborsClassifier(30)),
-        ('forest', RandomForestClassifier(n_estimators=100, min_samples_leaf=20)),
-        ('svc', SVC(probability=True)),
-        ('neural', MLPClassifier(hidden_layer_sizes=(4, 5), activation='logistic', solver='lbfgs', max_iter=36000)),
-    ], voting='soft'))
-)
-model_ovr_voting.fit(X_train, y_train)
-y_pred = model_ovr_voting.predict(X_valid)
-print(model_ovr_voting.score(X_train, y_train))
-print(model_ovr_voting.score(X_valid, y_valid))
-print(classification_report(y_valid, y_pred, target_names=unique_genres, zero_division=0))
-print(precision_score(y_valid, y_pred, average="macro", zero_division=0))
-print("")
-
 # movie_genres.to_csv(path_or_buf="output.csv", index=False)
