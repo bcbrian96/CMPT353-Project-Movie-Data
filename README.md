@@ -1,5 +1,5 @@
 # CMPT 353 - Project
-# Brian Lee & Ha Thu Nguyen
+## Brian Lee & Ha Thu Nguyen
 
 The movie industry is full of intriguing mysteries and presents an interesting opportunity to apply data science. Therefore, the purpose of this project was to analyze the relationship between the success of a movie and a movie’s plot.
 
