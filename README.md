@@ -10,7 +10,7 @@ The movie industry is full of intriguing mysteries and presents an interesting o
 5.	Is it possible to build a movie recommendation system to determine a target audience?
 
 ## Required Libraries
-- numpy, pandas, matplotlib, NLTK, json, string, sklearn
+- numpy, pandas, stats, matplotlib, NLTK, json, string, sklearn, seaborn
 
 ## Data Source 
 - tmdb_5000_movies.csv
