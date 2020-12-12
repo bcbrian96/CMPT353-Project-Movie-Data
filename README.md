@@ -25,7 +25,7 @@ command: 'jupyter-notebook complete_script.ipynb'.
 
 predict_movie_genres.py shows the details of the genre classification and contains the 'best' model, as well as model comparison
 
-command: python3 predict_movie_genres.py 
+command: 'python3 predict_movie_genres.py' 
 
 ### Other Python Scripts
 
