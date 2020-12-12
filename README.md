@@ -12,6 +12,11 @@ The movie industry is full of intriguing mysteries and presents an interesting o
 ## Required Libraries
 - numpy, pandas, matplotlib, NLTK, json, string, sklearn
 
+## Data Source 
+tmdb_5000_movies.csv
+
+The CSV file contains data on 4800 different movies and originates from The Movie Database (TMDb)
+
 ## Commands
 ### complete_script.ipynb
 The jupyter notebook - complete_script.ipynb - shows an overview of the data analysis and steps to preprocess data. It includes 
