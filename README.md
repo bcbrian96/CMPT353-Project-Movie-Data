@@ -13,7 +13,7 @@ The movie industry is full of intriguing mysteries and presents an interesting o
 - numpy, pandas, matplotlib, NLTK, json, string, sklearn
 
 ## Data Source 
-tmdb_5000_movies.csv
+- tmdb_5000_movies.csv
 
 The CSV file contains data on 4800 different movies and originates from The Movie Database (TMDb)
 
