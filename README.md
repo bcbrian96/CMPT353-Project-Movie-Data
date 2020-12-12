@@ -35,9 +35,15 @@ predict_movie_genres.py shows the details of the genre classification and contai
 
 command: 'python3 predict_movie_genres.py' 
 
+### analyze_movies.py
+
+analyze_movies.py shows the details of the statistical tests and Chi-square test to determine if there is genres has an influence on movie genres
+
+command: 'python3 analyze_movies.py' 
+
 ### Other Python Scripts
 
-The other python scripts (analyze_movies.py, rating_regressor.py and parse_data.py) show the different approaches and steps taken for this project. These results were unused in our final report.
+The other python scripts (rating_regressor.py and parse_data.py) show the different approaches and steps taken for this project. These results were unused in our final report.
 
 ### Report
 
