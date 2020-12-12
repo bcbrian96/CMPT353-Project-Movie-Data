@@ -158,5 +158,3 @@ print(model_voting.score(X_valid, y_valid))
 y_pred = model_kneighbors.predict(X_valid)
 print(r2_score(y_valid, y_pred))
 print("")
-
-# data.to_csv(path_or_buf="output.csv", index=False)

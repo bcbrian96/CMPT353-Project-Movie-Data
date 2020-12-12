@@ -167,5 +167,4 @@ print(classification_report(y_valid, y_pred, target_names=unique_genres, zero_di
 print(precision_score(y_valid, y_pred, average="macro", zero_division=0))
 print("")
 
-# movie_genres.to_csv(path_or_buf="output.csv", index=False)
 '''
