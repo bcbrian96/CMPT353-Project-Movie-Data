@@ -72,7 +72,7 @@ mlb = MultiLabelBinarizer()
 genres_binarized = pd.DataFrame(mlb.fit_transform(movie_genres['genres']), columns=mlb.classes_, index=movie_genres.index)
 movie_genres = movie_genres.join(genres_binarized)
 movie_genres = movie_genres.drop(['genres'], axis=1)
-print(movie_genres)
+# print(movie_genres)
 
 
 ''' PROCESS TEXT '''
@@ -102,12 +102,14 @@ model_ovr_sgd = make_pipeline(
 )
 model_ovr_sgd.fit(X_train, y_train)
 y_pred = model_ovr_sgd.predict(X_valid)
-print(model_ovr_sgd.score(X_train, y_train))
-print(model_ovr_sgd.score(X_valid, y_valid))
+# print(model_ovr_sgd.score(X_train, y_train))
+# print(model_ovr_sgd.score(X_valid, y_valid))
 print(classification_report(y_valid, y_pred, target_names=unique_genres, zero_division=0))
+print("Precision score: ", end="")
 print(precision_score(y_valid, y_pred, average="macro", zero_division=0))
 print("")
 
+'''
 print("OVR - Kneighbors Classifier:")
 model_ovr_knc = make_pipeline(
     CountVectorizer(),
@@ -166,3 +168,4 @@ print(precision_score(y_valid, y_pred, average="macro", zero_division=0))
 print("")
 
 # movie_genres.to_csv(path_or_buf="output.csv", index=False)
+'''
